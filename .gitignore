@@ -12,4 +12,3 @@
 *.out
 .idea/
 server-packager
-vendor/
