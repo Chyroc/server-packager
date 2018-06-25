@@ -1,3 +1,7 @@
+// https://github.com/elazarl/go-bindata-assetfs
+// Copyright (c) 2014, Elazar Leibovich
+// All rights reserved.
+
 package main
 
 import (
