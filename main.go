@@ -129,7 +129,7 @@ func main() {
 		log.Fatalln(err)
 	}
 	log.Printf("serving %s as %s on %s", *root, *prefix, *addr)
-	http.Handle(*prefix, http.StripPrefix(*prefix, http.FileServer(&assetfs.AssetFS{Asset: Asset, AssetDir: AssetDir, AssetInfo: AssetInfo, Prefix: "data"})))
+	http.Handle(*prefix, http.StripPrefix(*prefix, http.FileServer(&assetfs.AssetFS{Asset: Asset, AssetDir: AssetDir, AssetInfo: AssetInfo, Prefix: *prefix})))
 
 	logger := http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		log.Printf("%s %s %s", r.RemoteAddr, r.Method, r.URL)
